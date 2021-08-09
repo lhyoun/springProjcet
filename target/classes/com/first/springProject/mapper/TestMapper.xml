@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.first.springProject.mapper.TestMapper">
+<!-- namespace에 이 xml을 참조할 경로를 적어주면 된다 
+	 참고로 mapper의 역할은 다음과 같다
+	 MyBatis 사용 목적 중 하나는 DAO로부터 SQL문을 분리하는 것이다
+	 분리된 SQL문은 SQL mapper 파일에 작성하며 DAO에서는 SqlSession 객체가 SQL mapper 파일을 참조하게 된다	
+-->
+
+	<select id="test"
+		resultType="com.first.springProject.domain.TestVo">
+		select * from test
+	</select>
+	
+</mapper>
