@@ -19,6 +19,6 @@ public class TestController {
 		TestVo testVo = testMapper.test();
 		//int test = testMapper.test();
 		System.out.println(testVo.getTest());
-		return "test";
+		return "contact";
 	}
 }
