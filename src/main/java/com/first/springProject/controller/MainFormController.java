@@ -17,17 +17,29 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/mainForm/*")
 public class MainFormController {
 	private final TravelMapper travelMapper;
-	// @RequiredArgsConstructor있어서 Autowired -> 생성자 주입
+	// @RequiredArgsConstructor�엳�뼱�꽌 Autowired -> �깮�꽦�옄 二쇱엯
 	
-	// 해당 프로젝트의 최초 진입점
-	// http://localhost:8080 -> DispatcherServlet -> /(root)를 HomeController에서 받아주는데 
+	// �빐�떦 �봽濡쒖젥�듃�쓽 理쒖큹 吏꾩엯�젏
+	// http://localhost:8080 -> DispatcherServlet -> /(root)瑜� HomeController�뿉�꽌 諛쏆븘二쇰뒗�뜲 
 	// return "redirect:/mainForm/index"
 	@RequestMapping("/index")
 	public String test(Model model) {
-		List<Travel> travelInfo = travelMapper.getTravelList();
+	      try {
+	          List<Travel> travelInfo = travelMapper.getTravelList();
+	          model.addAttribute("travelList", travelInfo);
+	          
+	       }catch(Exception e) {
+	          
+	       }
+			
 		
-		model.addAttribute("travelList", travelInfo);
+		
 		
 		return "index";
+	}
+	@RequestMapping("/detail")
+	public String test1(){
+		System.out.println("123");
+		return "detailpage";
 	}
 }

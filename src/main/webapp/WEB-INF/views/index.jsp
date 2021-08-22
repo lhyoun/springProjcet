@@ -41,7 +41,7 @@
 							</div>
 							<div class="card-body">
 								<h5 class="card-title">
-									<a href="#">${travel.title }</a>
+									<a href="/traveldetail/${travel.trv_no}">${travel.title }</a>
 								</h5>
 								<p class="card-text">${travel.remark }</p>
 								<div class="read-more">

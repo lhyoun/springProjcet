@@ -10,4 +10,12 @@
 		select * from travel;
 	</select>
 	
+	<select id = "getTravel"
+		resultType="com.first.springProject.domain.Travel">
+		select * from travel
+		where trv_no = #{trv_no}
+		;
+		</select>
+	
+	
 </mapper>
