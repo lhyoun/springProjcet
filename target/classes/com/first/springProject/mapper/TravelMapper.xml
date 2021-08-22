@@ -15,7 +15,11 @@
 		select * from travel
 		where trv_no = #{trv_no}
 		;
-		</select>
-	
+	</select>
+	<insert id="registTravel"
+		parameterType="com.first.springProject.domain.Travel">
+		insert into travel (trv_no, title)
+		values (#{trv_no}, #{title])		
+	</insert>
 	
 </mapper>

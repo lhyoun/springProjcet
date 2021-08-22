@@ -9,4 +9,6 @@ public interface TravelMapper {
 	public List<Travel> getTravelList(); 
 	
 	public Travel getTravel(int trv_no);
+	
+	public void registTravel(int trv_no, String title);
 }
